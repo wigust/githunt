@@ -3,4 +3,4 @@ ADD . /src
 WORKDIR /src
 RUN yarn install
 RUN yarn run build-web
-ENTRYPOINT ["yarn", "start"]
+ENTRYPOINT ["cp", "--archive", "--no-target-directory", "--verbose", "build", "/mnt"]
