@@ -26,7 +26,7 @@
 (define-public githunt
   (package
     (name "githunt")
-    (version "3.0-1")
+    (version "3.0-2")
     (source (local-file (string-append (dirname (current-filename))
                                        "/githunt-" version ".tar.gz")))
     (build-system trivial-build-system)
