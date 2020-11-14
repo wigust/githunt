@@ -1,6 +1,5 @@
+
 body {
-  /*background-color: #f9f9f9;*/
-  background: #f4f4f4;
   min-height: 100vh;
 }
 
@@ -21,3 +20,11 @@ a {
   background: #1157ed;
   border-color: #1157ed;
 }
+
+.container {
+    max-width: 100% !important;
+}
+
+/* .body-row { */
+/*   column-count: 2; */
+/* } */

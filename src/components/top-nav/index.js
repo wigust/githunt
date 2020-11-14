@@ -15,7 +15,7 @@ class TopNav extends React.Component {
     return (
       <div className='top-nav'>
         <div className="container clearfix">
-          <a href='https://cgit.duckdns.org/github/githunt/'
+          <a href='https://githunt.wugi.info/'
              rel="noopener noreferrer"
              target='_blank'
              className="logo clearfix float-left">

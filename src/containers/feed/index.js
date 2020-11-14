@@ -8,6 +8,7 @@ import Alert from '../../components/alert';
 import Loader from '../../components/loader';
 import TopNav from '../../components/top-nav';
 import Filters from '../../components/filters';
+import LanguageFilter from '../../components/filters/language-filter';
 import GroupHeading from '../../components/group-heading';
 import { fetchTrending } from '../../redux/github/actions';
 import RepositoryList from '../../components/repository-list';
@@ -165,6 +166,8 @@ class FeedContainer extends React.Component {
                 dateJump={ this.props.preference.dateJump }
               />
             }
+          </div>
+          <div className="body-row">
             <div className="group-filters">
               {
                 this.hasRepositories() && <Filters
@@ -177,8 +180,6 @@ class FeedContainer extends React.Component {
                 />
               }
             </div>
-          </div>
-          <div className="body-row">
             { this.renderRepositoriesList() }
 
             { this.props.github.processing && <Loader/> }

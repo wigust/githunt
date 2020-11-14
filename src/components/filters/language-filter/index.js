@@ -13,7 +13,7 @@ class LanguageFilter extends React.Component {
   state = {
     filterText: '',
     selectedIndex: 0,
-    showDropdown: false
+    showDropdown: true
   };
 
   focusFilterInput = () => {
@@ -178,10 +178,6 @@ class LanguageFilter extends React.Component {
   render() {
     return (
       <div className='language-filter-wrap'>
-        <button onClick={ this.toggleDropdown } className="btn btn-light language-filter shadowed">
-          <i className="fa fa-filter mr-2"></i>
-          { this.props.selectedLanguage || 'All Languages' }
-        </button>
         { this.state.showDropdown && this.getLanguageDropdown() }
       </div>
     );
