@@ -1,7 +1,6 @@
 .list-item-container {
-  padding: 0 0 20px;
-  margin-bottom: 20px;
-  border-bottom: 1px solid #e8e8e8;
+  padding: 0 0 5px;
+  margin-bottom: 5px;
   position: relative;
 }
 
@@ -72,7 +71,6 @@
   width: 10px;
   height: 10px;
   margin-right: 4px;
-  border-radius: 50%;
 }
 
 .list-item-container .author-link {
@@ -82,7 +80,6 @@
 }
 
 .list-item-container .author-img {
-  height: 92px;
   width: 92px;
   border-radius: 92px;
 }

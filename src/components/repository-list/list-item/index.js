@@ -15,19 +15,6 @@ class ListItem extends React.Component {
     return (
       <div className="col-12 list-item-container">
         <div className="list-item-body">
-          <div className="repo-header">
-            <h3>
-              <a href={ this.props.repository.html_url } rel="noopener noreferrer" target="_blank">
-                <span className="text-normal">{ this.props.repository.owner.login } / </span>
-                { this.props.repository.name }
-              </a>
-            </h3>
-            <p className="repo-meta text-muted small">Built by &middot; <a href={ this.props.repository.owner.html_url } rel="noopener noreferrer" target="_blank">{ this.props.repository.owner.login }</a> &middot; { moment(this.props.repository.created_at).format('MMMM D YYYY') }</p>
-          </div>
-          <div className="repo-body">
-            <p>{ this.props.repository.description || 'No description given.' }</p>
-          </div>
-          <div className="repo-footer">
             {
               this.props.repository.language && (
                 <span className="d-inline-flex align-items-center mr-3">
@@ -45,6 +32,7 @@ class ListItem extends React.Component {
                rel="noopener noreferrer"
                target="_blank">
               <Star />
+              &nbsp;
               { this.props.repository.stargazers_count.toLocaleString() }
             </a>
             <a className="muted-link d-inline-block mr-3"
@@ -52,6 +40,7 @@ class ListItem extends React.Component {
                rel="noopener noreferrer"
                target="_blank">
               <Fork />
+              &nbsp;
               { this.props.repository.forks ? this.props.repository.forks.toLocaleString() : 0 }
             </a>
             <a className="muted-link d-inline-block mr-3"
@@ -59,22 +48,16 @@ class ListItem extends React.Component {
                rel="noopener noreferrer"
                target="_blank">
               <Issue />
+              &nbsp;
               { this.props.repository.open_issues ? this.props.repository.open_issues.toLocaleString() : 0 }
             </a>
-          </div>
+              <a href={ this.props.repository.html_url } rel="noopener noreferrer" target="_blank">
+                <span className="text-normal">{ this.props.repository.owner.login } / </span>
+                { this.props.repository.name }
+              </a>
+            &nbsp;
+            { this.props.repository.description || 'No description given.' }
         </div>
-
-        <a href={ this.props.repository.owner.html_url }
-           target="_blank"
-           rel="noopener noreferrer"
-           className="author-link d-none d-lg-block d-xl-block d-md-block">
-          <img className='author-img'
-               src={ this.props.repository.owner.avatar_url }
-               onError={ (e) => {
-                 e.target.src = '/img/logo.svg';
-               } }
-               alt={ this.props.repository.owner.login } />
-        </a>
       </div>
     );
   }
