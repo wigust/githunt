@@ -15,7 +15,7 @@ class TopNav extends React.Component {
     return (
       <div className='top-nav'>
         <div className="container clearfix">
-          <a href='https://github.com/kamranahmedse/githunt'
+          <a href='https://cgit.duckdns.org/github/githunt/'
              rel="noopener noreferrer"
              target='_blank'
              className="logo clearfix float-left">
@@ -27,36 +27,10 @@ class TopNav extends React.Component {
             </div>
           </a>
           <div className="float-right external-btns">
-            <a href='http://github.com/kamranahmedse/githunt'
+            <a href='https://cgit.duckdns.org/github/githunt/'
                target='_blank'
                rel="noopener noreferrer"
                className="btn btn-dark"><i className="fa fa-github mr-1"></i> View Source</a>
-            {
-              !isRunningExtension && (
-                <a href='https://goo.gl/e7YP1h'
-                   target='_blank'
-                   rel="noopener noreferrer"
-                   className="btn btn-danger d-none d-sm-none d-md-inline-block d-xl-inline-block d-lg-inline-block">
-                  <i className="fa fa-chrome mr-1"></i> Use Extension
-                </a>
-              )
-            }
-            {
-              isRunningExtension && (
-                <a href='https://twitter.com/kamranahmedse'
-                   target='_blank'
-                   rel="noopener noreferrer"
-                   className="btn btn-danger d-none d-sm-none d-md-inline-block d-xl-inline-block d-lg-inline-block">
-                  <i className="fa fa-comment mr-1"></i> Give Feedback
-                </a>
-              )
-            }
-            <a href={ `https://twitter.com/intent/tweet?text=${this.tweet}` }
-               target='_blank'
-               rel="noopener noreferrer"
-               className="btn btn-primary btn-tweet d-none d-sm-none d-md-none d-xl-inline-block d-lg-inline-block">
-              <i className="fa fa-twitter mr-1"></i> Tweet
-            </a>
           </div>
         </div>
       </div>
